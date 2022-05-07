@@ -1,7 +1,7 @@
-document.querySelector('button').addEventListener('click', getJoke)
+document.querySelector('button').addEventListener('click', getQuote)
 
-function getJoke() {
-fetch("https://icanhazdadjoke.com/api")
+function getQuote() {
+fetch("https://api.kanye.rest")
 .then(res => res.json())
 .then(data => {
     console.log(data.quote)
@@ -11,20 +11,3 @@ fetch("https://icanhazdadjoke.com/api")
 .catch(err => {
     console.log(`error ${err}`)
 })};
-
-
-
-
-
-/* document.querySelector('button').addEventListener('click', getJoke)
-
-function getJoke() {
-fetch("https://icanhazdadjoke.com/")
-.then(res => res.json())
-.then(data => {
-    console.log(data.getJoke)
-    document.querySelector('p').innerHTML = data.message
- })
-.catch(err => {
-console.log(`error ${err}`)
-})}; */
